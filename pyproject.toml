@@ -1,0 +1,29 @@
+[project]
+name = "brasileirao-predictions"
+version = "0.1.0"
+description = "Previsão de resultados (vitória, empate ou derrota) do Campeonato Brasileiro com Random Forest e XGBoost"
+authors = [
+    { name = "neatzzy", email = "elviscorreamirandajr@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "pandas>=3.1.0",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.66.1",
+    "xgboost>=3.4.1",
+]
+
+[project.scripts]
+brasileirao-predictions = "brasileirao_predictions:main"
+
+[build-system]
+requires = ["uv_build>=0.13.6,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyterlab>=4.6.5",
+    "pytest>=9.2.0",
+]
